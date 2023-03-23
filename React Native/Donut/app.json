@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Donut",
+    "slug": "Donut",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
