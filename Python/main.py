@@ -1,11 +1,8 @@
-# import necessary modules
 import math
 import os
 
-# clear the terminal screen
 os.system('cls')
 
-# define the function to generate the donut
 def donut():
     
     # define the characters to be used to draw the donut
@@ -15,7 +12,7 @@ def donut():
     sinn = [math.sin(i) for i in range(628)]
     cosn = [math.cos(i) for i in range(628)]
     
-    # initialize arrays for the z-buffer and character buffer
+    # initialize arrays z-buffer and character buffer
     z = [0] * 1760
     b = [' '] * 1760
     
@@ -42,7 +39,7 @@ def donut():
                 z[o] = mess
                 b[o] = chars[N if N > 0 else 0]
     
-    # print the character buffer to the terminal screen and return the updated angle values
+    # print to the terminal screen and return the updated angle values
     print("\033[0;0H" + "".join(b))
     return A + 0.12, B + 0.10
 
@@ -50,6 +47,6 @@ def donut():
 A = 0
 B = 0
 
-# animate the donut by repeatedly calling the donut() function
+# animate the donut
 while True:
     A, B = donut()
